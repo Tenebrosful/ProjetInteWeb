@@ -23,12 +23,37 @@ header {
       width: 100%
     }
     nav > ol {
-      background-color: #fff946;
       display: flex;
       justify-content: flex-end;
+      li {
+        padding-left: .25em;
+        padding-right: .25em;
+      }
+      li:first-of-type {
+        padding-left: 0em;
+      }
+      li:last-of-type {
+        padding-right: 0em;
+      }
     }
   }
   & > p {
     color: grey;
   }
+}
+
+section {
+  #navigation {
+    padding: 1em .5em;
+    h1 {
+      font-weight: bold;
+    }
+  }
+}
+
+footer {
+  background-color: lightgray;
+  padding: 1.25em 2em;
+  display: flex;
+  justify-content: flex-end;
 }
