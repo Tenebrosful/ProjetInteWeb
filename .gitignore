@@ -25,6 +25,7 @@ node_modules/
 *.ini
 *.cache
 *.env
+.sass-cache
 
 # Rajouté manuellement
 logs/
