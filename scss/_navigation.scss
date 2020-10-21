@@ -1,0 +1,29 @@
+.navigation {
+  padding: 1em .5em;
+  h1 {
+    font-weight: bold;
+    color: #ff7b2f;
+    margin-bottom: 1em;
+  }
+  ul {
+    margin-left: 2em;
+    li {
+      font-size: 11pt;
+      margin-left: 1.75em;
+      margin-bottom: .3em;
+      a {
+        i {
+          margin-right: .5em;
+        }
+        text-decoration: none;
+        color: #ff7b2f;
+      }
+    }
+    li.with-icon {
+      margin-left: 0em;
+    }
+    li:last-of-type {
+      margin-bottom: 0em;
+    }
+  }
+}

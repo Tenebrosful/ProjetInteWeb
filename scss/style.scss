@@ -7,21 +7,6 @@
 
 @import '_header';
 
-section {
-  .navigation {
-    padding: 1em .5em;
-    h1 {
-      font-weight: bold;
-      color: #ff7b2f;
-      margin-bottom: 1em;
-    }
-    nav > ol > li {
-      a {
-        text-decoration: none;
-        color: #ff7b2f;
-      }
-    }
-  }
-}
+@import '_navigation';
 
 @import '_footer';
