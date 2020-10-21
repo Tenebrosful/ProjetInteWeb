@@ -1,0 +1,50 @@
+$s: 70em !default;
+$m: 999em !default;
+$l: 999em !default;
+$el: 999em !default;
+
+body {
+  display: grid;
+  grid: auto-flow / 1fr;
+  grid-auto-flow: row dense;
+}
+
+main {
+  display: grid;
+  grid: auto-flow / repeat(2, 1fr);
+
+  @media screen and (min-width: $s) {
+    grid: auto-flow / repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: $m) {
+    grid: auto-flow / repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: $l) {
+    grid: auto-flow / repeat(5, 1fr);
+  }
+
+  @media screen and (min-width: $el) {
+    grid: auto-flow / repeat(6, 1fr);
+  }
+
+  grid-auto-flow: row dense;
+  grid-gap: 1em 5px;
+  justify-content: space-around;
+
+  nav {
+    grid-column: span 2;
+    @media screen and (min-width: $s) {
+        grid-column: 1;
+    }
+  }
+}
+
+.grid-column-small {
+  grid-column: span 1;
+}
+
+.grid-column-medium {
+  grid-column: span 2;
+}

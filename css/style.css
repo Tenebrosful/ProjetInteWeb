@@ -45,6 +45,41 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+body {
+  display: grid;
+  grid: auto-flow / 1fr;
+  grid-auto-flow: row dense; }
+
+main {
+  display: grid;
+  grid: auto-flow/repeat(2, 1fr);
+  grid-auto-flow: row dense;
+  grid-gap: 1em 5px;
+  justify-content: space-around; }
+  @media screen and (min-width: 70em) {
+    main {
+      grid: auto-flow/repeat(3, 1fr); } }
+  @media screen and (min-width: 999em) {
+    main {
+      grid: auto-flow/repeat(4, 1fr); } }
+  @media screen and (min-width: 999em) {
+    main {
+      grid: auto-flow/repeat(5, 1fr); } }
+  @media screen and (min-width: 999em) {
+    main {
+      grid: auto-flow/repeat(6, 1fr); } }
+  main nav {
+    grid-column: span 2; }
+    @media screen and (min-width: 70em) {
+      main nav {
+        grid-column: 1; } }
+
+.grid-column-small {
+  grid-column: span 1; }
+
+.grid-column-medium {
+  grid-column: span 2; }
+
 header {
   background-color: lightblue;
   padding: .75em; }
