@@ -1,35 +1,27 @@
-@import 'reset';
+@import '_reset';
+
+@import 'fontawesome/fontawesome';
+@import 'fontawesome/solid';
+@import "fontawesome/brands";
 @import 'grid';
 
-header {
-  background-color: lightblue;
-  padding: .75em;
-  #header {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    #logo {
-      display: flex;
-      align-items: center;
-      img {
-        height: 2em;
-        margin-right: 10px;
-      }
-      p {
-        font-weight: bold;
-        font-size: 18pt;
+@import '_header';
+
+section {
+  .navigation {
+    padding: 1em .5em;
+    h1 {
+      font-weight: bold;
+      color: #ff7b2f;
+      margin-bottom: 1em;
+    }
+    nav > ol > li {
+      a {
+        text-decoration: none;
+        color: #ff7b2f;
       }
     }
-    nav {
-      width: 100%
-    }
-    nav > ol {
-      background-color: #fff946;
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
-  & > p {
-    color: grey;
   }
 }
+
+@import '_footer';
