@@ -38,13 +38,11 @@ main {
 
   // Article étroit
   .grid-column-small {
-    background-color: lightseagreen;
     grid-column: span 1;
   }
 
   // Article large
   .grid-column-medium {
-    background-color: lightsalmon;
     grid-column: span 2;
   }
 

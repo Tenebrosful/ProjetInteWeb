@@ -1,5 +1,64 @@
 main {
   .article {
-    background-color: red;
+    background-color: lightpink;
+    .rotation {
+      background-color: lightblue;
+
+      width: 100%;
+      transform: rotate(15deg);
+      .article-thumbnail {
+        text-decoration: none;
+        position: relative;
+        .category {
+          position: absolute;
+          margin: .75em;
+          color: white;
+          font-weight: bold;
+          font-size: 10pt;
+          text-shadow: .15em .1em .1em black;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .article-content {
+        padding: .75em;
+        h2 {
+          font-weight: bold;
+          color: #ff7b2f;
+          font-size: 14pt;
+          margin-bottom: .5em;
+        }
+        aside {
+          position: relative;
+          padding-top: .75em;
+          margin-bottom: 1em;
+          &:before {
+            content : "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3em;
+            border-top: .5em solid;
+          }
+          .author {
+            i {
+              margin-right: .5em;
+            }
+            text-decoration: underline;
+          }
+          time {
+            i {
+              margin-right: .5em;
+            }
+          }
+        }
+        .description {
+          margin-bottom: 1em;
+          text-align: justify;
+        }
+      }
+    }
   }
 }
