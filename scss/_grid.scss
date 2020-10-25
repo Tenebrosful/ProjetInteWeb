@@ -3,45 +3,49 @@
 body {
   display: grid;
   grid: auto-flow / 1fr;
-  grid-auto-flow: row dense;
 }
 
 main {
   display: grid;
   grid: auto-flow / repeat(2, 1fr);
+  grid-auto-flow: row dense;
+  grid-gap: .25em .25em;
+  justify-content: space-around;
 
   @media screen and (min-width: $s) {
     grid: auto-flow / repeat(3, 1fr);
   }
-
   @media screen and (min-width: $m) {
     grid: auto-flow / repeat(4, 1fr);
   }
-
   @media screen and (min-width: $l) {
     grid: auto-flow / repeat(5, 1fr);
   }
-
   @media screen and (min-width: $el) {
     grid: auto-flow / repeat(6, 1fr);
   }
 
-  grid-auto-flow: row dense;
-  grid-gap: 1em 5px;
-  justify-content: space-around;
-
+  // Special case for nav element
   nav {
+    background-color: lightgreen;
+    // On mobile 2 columns
     grid-column: span 2;
+    // Larger screens always 1 column
     @media screen and (min-width: $s) {
         grid-column: 1;
     }
   }
-}
 
-.grid-column-small {
-  grid-column: span 1;
-}
+  // Article étroit
+  .grid-column-small {
+    background-color: lightseagreen;
+    grid-column: span 1;
+  }
 
-.grid-column-medium {
-  grid-column: span 2;
+  // Article large
+  .grid-column-medium {
+    background-color: lightsalmon;
+    grid-column: span 2;
+  }
+
 }
