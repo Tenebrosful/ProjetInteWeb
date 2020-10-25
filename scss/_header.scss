@@ -1,7 +1,7 @@
 @import '_breakpoints';
 
 .header {
-  background-color: #00b0ff;
+  background-color: whitesmoke;
   padding: .75em;
   margin-right: .5em;
   margin-bottom: .5em;
@@ -52,7 +52,13 @@
     }
   }
   & > p {
-    margin: 1em 0em;
+    margin-top: 2em;
+    margin-bottom: 3em;
     color: grey;
+  }
+  @media screen and (min-width: $s) {
+    & > p {
+      margin-bottom: 2em;
+    }
   }
 }

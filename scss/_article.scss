@@ -1,11 +1,23 @@
 main {
   .article {
-    background-color: lightpink;
-    .rotation {
-      background-color: lightblue;
-
-      width: 100%;
-      transform: rotate(15deg);
+    /*background-color: lightpink;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    &:nth-child(even) {
+      .article-rotation {
+        transform: rotate(1deg);
+      }
+    }
+    &:nth-child(odd) {
+      .article-rotation {
+        transform: rotate(-1deg);
+      }
+    }
+    .article-rotation {
+      background-color: whitesmoke;
+      box-shadow: .1em .1em .5em black;
       .article-thumbnail {
         text-decoration: none;
         position: relative;
