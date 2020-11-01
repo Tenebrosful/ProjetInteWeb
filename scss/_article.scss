@@ -4,19 +4,21 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* Fais que l'élément à l'intérieur est plus petit donc il est possible d'effectuer la rotation */
     padding: 1em;
-    &:nth-child(even) {
+    &:nth-child(odd) {
       .article-rotation {
         transform: rotate(1deg);
       }
     }
-    &:nth-child(odd) {
+    &:nth-child(even) {
       .article-rotation {
         transform: rotate(-1deg);
       }
     }
     .article-rotation {
       background-color: whitesmoke;
+      height: 100%;
       box-shadow: .1em .1em .5em black;
       .article-thumbnail {
         text-decoration: none;

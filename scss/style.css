@@ -4648,24 +4648,22 @@ body {
 
 main {
   display: grid;
-  grid: auto-flow/repeat(2, 1fr);
-  grid-auto-flow: row dense;
-  grid-gap: .25em .25em;
-  justify-content: space-around; }
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row dense; }
   @media screen and (min-width: 40em) {
     main {
-      grid: auto-flow/repeat(3, 1fr); } }
+      grid-template-columns: repeat(3, 1fr); } }
   @media screen and (min-width: 55em) {
     main {
-      grid: auto-flow/repeat(4, 1fr); } }
+      grid-template-columns: repeat(4, 1fr); } }
   @media screen and (min-width: 70em) {
     main {
-      grid: auto-flow/repeat(5, 1fr); } }
+      grid-template-columns: repeat(5, 1fr); } }
   @media screen and (min-width: 85em) {
     main {
-      grid: auto-flow/repeat(6, 1fr); } }
+      grid-template-columns: repeat(6, 1fr); } }
   main nav {
-    background-color: lightgreen;
+    /*background-color: lightgreen;*/
     grid-column: span 2; }
     @media screen and (min-width: 40em) {
       main nav {
@@ -4676,7 +4674,7 @@ main {
     grid-column: span 2; }
 
 .header {
-  background-color: #00b0ff;
+  background-color: whitesmoke;
   padding: .75em;
   margin-right: .5em;
   margin-bottom: .5em;
@@ -4716,8 +4714,12 @@ main {
         .header .navbar nav {
           width: initial; } }
   .header > p {
-    margin: 1em 0em;
+    margin-top: 2em;
+    margin-bottom: 3em;
     color: grey; }
+  @media screen and (min-width: 40em) {
+    .header > p {
+      margin-bottom: 2em; } }
 
 .navigation {
   padding: 1em .5em; }
@@ -4743,56 +4745,68 @@ main {
       margin-bottom: 0em; }
 
 main .article {
-  width: 100%; }
-  main .article .rotation {
-    transform: rotate(15deg); }
-    main .article .rotation .article-thumbnail {
+  /*background-color: lightpink;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Fais que l'élément à l'intérieur est plus petit donc il est possible d'effectuer la rotation */
+  padding: 1em; }
+  main .article:nth-child(odd) .article-rotation {
+    transform: rotate(1deg); }
+  main .article:nth-child(even) .article-rotation {
+    transform: rotate(-1deg); }
+  main .article .article-rotation {
+    background-color: whitesmoke;
+    height: 100%;
+    box-shadow: .1em .1em .5em black; }
+    main .article .article-rotation .article-thumbnail {
       text-decoration: none;
       position: relative; }
-      main .article .rotation .article-thumbnail .category {
+      main .article .article-rotation .article-thumbnail .category {
         position: absolute;
         margin: .75em;
         color: white;
         font-weight: bold;
         font-size: 10pt;
         text-shadow: .15em .1em .1em black; }
-      main .article .rotation .article-thumbnail img {
+      main .article .article-rotation .article-thumbnail img {
         width: 100%;
         height: auto; }
-    main .article .rotation .article-content {
+    main .article .article-rotation .article-content {
       padding: .75em; }
-      main .article .rotation .article-content h2 {
+      main .article .article-rotation .article-content h2 {
         font-weight: bold;
         color: #ff7b2f;
         font-size: 14pt;
         margin-bottom: .5em; }
-      main .article .rotation .article-content aside {
+      main .article .article-rotation .article-content aside {
         position: relative;
         padding-top: .75em;
         margin-bottom: 1em; }
-        main .article .rotation .article-content aside:before {
+        main .article .article-rotation .article-content aside:before {
           content: "";
           position: absolute;
           left: 0;
           top: 0;
           width: 3em;
           border-top: .5em solid; }
-        main .article .rotation .article-content aside .author {
+        main .article .article-rotation .article-content aside .author {
           text-decoration: underline; }
-          main .article .rotation .article-content aside .author i {
+          main .article .article-rotation .article-content aside .author i {
             margin-right: .5em; }
-        main .article .rotation .article-content aside time i {
+        main .article .article-rotation .article-content aside time i {
           margin-right: .5em; }
-      main .article .rotation .article-content .description {
+      main .article .article-rotation .article-content .description {
         margin-bottom: 1em;
         text-align: justify; }
 
 .footer {
-  background-color: grey;
-  padding: 1.25em 2em;
+  /*background-color: grey;*/
+  padding: 1.25em 2.5em;
   display: flex;
   justify-content: flex-end; }
   .footer button {
+    background-color: whitesmoke;
     padding: .2em 2em;
     border: .1em solid;
     border-radius: 1em;
@@ -4800,5 +4814,17 @@ main .article {
     align-items: center; }
     .footer button i {
       margin-left: .3em; }
+  @media screen and (min-width: 40em) {
+    .footer {
+      padding: 1.25em 5em; } }
+  @media screen and (min-width: 55em) {
+    .footer {
+      padding: 1.25em 10em; } }
+  @media screen and (min-width: 70em) {
+    .footer {
+      padding: 1.25em 15em; } }
+  @media screen and (min-width: 85em) {
+    .footer {
+      padding: 1.25em 20em; } }
 
 /*# sourceMappingURL=style.css.map */
